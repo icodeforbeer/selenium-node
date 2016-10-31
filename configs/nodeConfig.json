@@ -1,0 +1,25 @@
+{
+  "capabilities": [
+    {
+      "browserName": "firefox",
+      "platform": "WINDOWS",
+      "maxInstances": 3
+    },
+    {
+      "browserName": "internet explorer",
+      "platform": "WINDOWS",
+      "maxInstances": 1
+    },
+    {
+      "browserName": "chrome",
+      "platform": "WINDOWS",
+      "maxInstances": 3
+    }
+  ],
+  "configuration":
+  {
+    "nodeTimeout": 120,
+    "nodePolling": 2000,
+    "timeout": 30000
+  }
+}
