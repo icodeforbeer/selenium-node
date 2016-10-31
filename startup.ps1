@@ -12,4 +12,4 @@ Set-Content -Path $configFilePath  -Value ($config | ConvertTo-Json)
 
 $hubUrl = "http://{0}:{1}/grid/register" -f $hubHost, $hubPort
 Write-Host "Trying to register with $hubUrl with node on port $port"
-java -jar $workingFolder\selenium-server-standalone-2.53.1.jar -role node -port $port -nodeConfig "./configs/nodeConfig.json" -hub $hubUrl -D"webdriver.chrome.driver=drivers/chromedriver.exe" -D"webdriver.ie.driver=drivers/IEDriverServer.exe" -D"webdriver.firefox.driver=drivers/geckodriver.exe"
+java -jar "$workingFolder\selenium-server-standalone-2.53.1.jar" -role node -port $port -nodeConfig "./configs/nodeConfig.json" -hub $hubUrl -D"webdriver.chrome.driver=drivers/chromedriver.exe" -D"webdriver.ie.driver=drivers/IEDriverServer.exe" -D"webdriver.firefox.driver=drivers/geckodriver.exe"
